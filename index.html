@@ -1,18 +1,18 @@
-<html onload="Loading()"><button onclick="changeColors()">Change</button>
+<html>
+<head>
 <script>
-function changeColors() {
-  if (collor === 1) {
-    draw.rectangle (0,0,innerWidth,innerHeight,'#000000','#000000',0);
-    collor = 2;
-  } else {
-    if (collor === 2) {
-      draw.rectangle (0,0,innerWidth,innerHeight,'#ff0000','#ff0000',0);
-      collor = 3;
+    var colors = ["white", "black", "red","orange","yellow","green","blue","purple"];
+    var colorIndex = 0;
+    function changeColor() {
+        var col = document.getElementById("body");
+        if( colorIndex >= colors.length ) {
+            colorIndex = 0;
+        }
+        col.style.backgroundColor = colors[colorIndex];
+        colorIndex++;
     }
-  }
-}
-function Loading() {
-  var collor = 1;
-}
 </script>
-</html>
+    <body id='body'>
+    <button onclick="changeColor();">Change color</button>
+    </body>
+</html
