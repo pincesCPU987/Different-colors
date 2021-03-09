@@ -1,12 +1,18 @@
-<button onclick="changeColors()">Change</button>
-<script>function changeColors() {
-if (collor === 1) {
-  draw.rectangle (0,0,innerWidth,innerHeight,'#000000','#000000',0);
-  collor = 2;
-} else {
-  if (collor === 2) {
-    draw.rectangle (0,0,innerWidth,innerHeight,'#ff0000','#ff0000',0);
-    collor = 3;
+<html onload="Loading()"><button onclick="changeColors()">Change</button>
+<script>
+function changeColors() {
+  if (collor === 1) {
+    draw.rectangle (0,0,innerWidth,innerHeight,'#000000','#000000',0);
+    collor = 2;
+  } else {
+    if (collor === 2) {
+      draw.rectangle (0,0,innerWidth,innerHeight,'#ff0000','#ff0000',0);
+      collor = 3;
+    }
   }
 }
+function Loading() {
+  var collor = 1;
+}
 </script>
+</html>
